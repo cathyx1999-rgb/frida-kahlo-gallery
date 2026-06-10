@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>弗里达·卡罗艺术展 | Frida Kahlo Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <h1>🎨 Frida Kahlo</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home" class="active">首页</a></li>
+                <li><a href="#gallery">作品展示</a></li>
+                <li><a href="#about">关于</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 首页英雄区域 -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h2 class="hero-title">弗里达·卡罗</h2>
+            <p class="hero-subtitle">墨西哥最伟大的艺术家</p>
+            <p class="hero-description">用色彩诠释灵魂，用画笔记录生命</p>
+            <button class="btn-primary" onclick="document.getElementById('gallery').scrollIntoView({behavior: 'smooth'})">
+                探索作品
+            </button>
+        </div>
+        <div class="hero-background"></div>
+    </section>
+
+    <!-- 作品展示区域 -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <h2 class="section-title">经典作品展示</h2>
+            <p class="section-subtitle">探索弗里达最具代表性的画作</p>
+
+            <!-- 过滤按钮 -->
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">全部</button>
+                <button class="filter-btn" data-filter="self-portrait">自画像</button>
+                <button class="filter-btn" data-filter="nature">自然</button>
+                <button class="filter-btn" data-filter="emotion">情感</button>
+            </div>
+
+            <!-- 画作网格 -->
+            <div class="artwork-grid">
+                <!-- 作品 1 -->
+                <div class="artwork-card" data-category="self-portrait">
+                    <div class="artwork-image">
+                        <img src="https://images.unsplash.com/photo-1578301978162-7aae4d755744?w=400&h=500&fit=crop" alt="The Two Fridas">
+                        <div class="overlay">
+                            <button class="btn-view">查看详情</button>
+                        </div>
+                    </div>
+                    <div class="artwork-info">
+                        <h3>两个弗里达</h3>
+                        <p class="year">1944年</p>
+                        <p class="description">这是弗里达最大的画作，描绘了两个自己手牵手，象征了她复杂的内心世界和痛苦的感情经历。</p>
+                        <div class="tags">
+                            <span class="tag">#自画像</span>
+                            <span class="tag">#自传体</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 作品 2 -->
+                <div class="artwork-card" data-category="emotion">
+                    <div class="artwork-image">
+                        <img src="https://images.unsplash.com/photo-1579783902614-e3fb5141b0cb?w=400&h=500&fit=crop" alt="The Wounded Deer">
+                        <div class="overlay">
+                            <button class="btn-view">查看详情</button>
+                        </div>
+                    </div>
+                    <div class="artwork-info">
+                        <h3>受伤的鹿</h3>
+                        <p class="year">1937年</p>
+                        <p class="description">弗里达用一只被箭射中的鹿来象征自己的身体和精神痛苦，是她最令人震撼的作品之一。</p>
+                        <div class="tags">
+                            <span class="tag">#痛苦</span>
+                            <span class="tag">#象征主义</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 作品 3 -->
+                <div class="artwork-card" data-category="self-portrait">
+                    <div class="artwork-image">
+                        <img src="https://images.unsplash.com/photo-1561214115-6d2f1b0609fa?w=400&h=500&fit=crop" alt="Self-Portrait with Thorn Necklace">
+                        <div class="overlay">
+                            <button class="btn-view">查看详情</button>
+                        </div>
+                    </div>
+                    <div class="artwork-info">
+                        <h3>带荆棘项链的自画像</h3>
+                        <p class="year">1940年</p>
+                        <p class="description">这幅自画像以荆棘项链和哭泣的眼睛为特征，表现了弗里达内心的痛楚和坚强。</p>
+                        <div class="tags">
+                            <span class="tag">#自画像</span>
+                            <span class="tag">#痛苦</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 作品 4 -->
+                <div class="artwork-card" data-category="nature">
+                    <div class="artwork-image">
+                        <img src="https://images.unsplash.com/photo-1561214115-6d2f1b0609fa?w=400&h=500&fit=crop" alt="Roots">
+                        <div class="overlay">
+                            <button class="btn-view">查看详情</button>
+                        </div>
+                    </div>
+                    <div class="artwork-info">
+                        <h3>根</h3>
+                        <p class="year">1943年</p>
+                        <p class="description">弗里达把自己描绘成一棵树，根深深扎入土地，象征对墨西哥土地和文化的深深联系。</p>
+                        <div class="tags">
+                            <span class="tag">#自然</span>
+                            <span class="tag">#身份认同</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 作品 5 -->
+                <div class="artwork-card" data-category="emotion">
+                    <div class="artwork-image">
+                        <img src="https://images.unsplash.com/photo-1578301978162-7aae4d755744?w=400&h=500&fit=crop" alt="Henry Ford Hospital">
+                        <div class="overlay">
+                            <button class="btn-view">查看详情</button>
+                        </div>
+                    </div>
+                    <div class="artwork-info">
+                        <h3>亨利·福特医院</h3>
+                        <p class="year">1932年</p>
+                        <p class="description">这幅作品描绘了弗里达的流产经历，充满医学符号和流血的意象，是她最具冲击力的作品。</p>
+                        <div class="tags">
+                            <span class="tag">#情感</span>
+                            <span class="tag">#悲剧</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 作品 6 -->
+                <div class="artwork-card" data-category="self-portrait">
+                    <div class="artwork-image">
+                        <img src="https://images.unsplash.com/photo-1561214115-6d2f1b0609fa?w=400&h=500&fit=crop" alt="Self-Portrait on the Borderline">
+                        <div class="overlay">
+                            <button class="btn-view">查看详情</button>
+                        </div>
+                    </div>
+                    <div class="artwork-info">
+                        <h3>边界上的自画像</h3>
+                        <p class="year">1932年</p>
+                        <p class="description">弗里达站在墨西哥和美国的边界之间，探讨身份认同、归属感和隔离的主题。</p>
+                        <div class="tags">
+                            <span class="tag">#自画像</span>
+                            <span class="tag">#身份</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 关于弗里达 -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">关于艺术家</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>弗里达·卡罗 (1907-1954)</h3>
+                    <p>
+                        弗里达·卡罗是墨西哥历史上最伟大的艺术家之一。她以其独特的自画像风格而闻名，深深扎根于墨西哥文化和民间艺术传统。
+                    </p>
+                    <p>
+                        尽管经历了严重的身体伤害和情感创伤，弗里达通过绘画将自己的痛苦和激情转化为艺术杰作。她的作品探讨了身份、自我表现、墨西哥国籍和两性的问题，这些主题至今仍然与观众产生共鸣。
+                    </p>
+                    <p>
+                        她的独特风格融合了超现实主义、象征主义和民间艺术元素，创造出一种原始而直接的艺术表达形式。她的作品在二十世纪后期获得了广泛的认可，成为女性艺术家和拉美艺术的标志。
+                    </p>
+                    <div class="stats">
+                        <div class="stat">
+                            <h4>143+</h4>
+                            <p>已知作品数量</p>
+                        </div>
+                        <div class="stat">
+                            <h4>55</h4>
+                            <p>自画像作品</p>
+                        </div>
+                        <div class="stat">
+                            <h4>1907-1954</h4>
+                            <p>艺术生涯时间</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-quote">
+                    <blockquote>
+                        "我画自己，因为我是我最了解的主题。"
+                        <footer>— 弗里达·卡罗</footer>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Frida Kahlo Gallery. 致敬伟大的艺术家。</p>
+            <div class="social-links">
+                <a href="#" title="Instagram">📸</a>
+                <a href="#" title="Twitter">🐦</a>
+                <a href="#" title="Facebook">👍</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 模态框 -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="modal-body">
+                <img id="modal-image" src="" alt="">
+                <div class="modal-info">
+                    <h2 id="modal-title"></h2>
+                    <p id="modal-description"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
